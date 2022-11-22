@@ -6,7 +6,8 @@ inputs:
     required: true
     default: 'vizzly.config.json'
 runs:
-  using: node16
+  using: docker
+  image: 'node:16-alpine'
   steps:
     - id: install-vizzly-cli
       run: npm i -g @vizzly/cli
