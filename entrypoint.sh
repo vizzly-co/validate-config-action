@@ -8,6 +8,7 @@ vizzly --help
 
 echo "Starting validating..."
 
+vizzly validate
 
 vizzly validate --config "$1" >> out
 
