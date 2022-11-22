@@ -12,4 +12,4 @@ runs:
       shell: bash
       run: |
         npm i -g @vizzly/cli
-        vizzly validate --config ${{ inputs.config-file-glob }} >> $GITHUB_OUTPUT
+        vizzly validate --config ${{ inputs.config-file-glob }} >>$GITHUB_OUTPUT
