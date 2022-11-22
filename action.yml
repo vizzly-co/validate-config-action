@@ -6,6 +6,7 @@ inputs:
     required: true
     default: 'vizzly.config.json'
 runs:
+  using: node16
   steps:
     - id: install-vizzly-cli
       run: npm i -g @vizzly/cli
