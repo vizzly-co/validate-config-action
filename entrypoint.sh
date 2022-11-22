@@ -7,9 +7,9 @@ npm i -g @vizzly/cli
 
 echo "Starting validating..."
 
-$x=$(vizzly validate --config "$1")
+vizzly validate --config "$1" >> out
 
-echo $x
+cat out
 
 # `$*` expands the `args` supplied in an `array` individually
 # or splits `args` in a string separated by whitespace.
