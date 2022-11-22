@@ -11,5 +11,5 @@ runs:
     - run: npm i -g @vizzly/cli
       shell: bash
     - id: validate-configs
-      run: vizzly validate --config ${{ inputs.config-file-glob }} >> $GITHUB_OUTPUT
+      run: $(vizzly validate --config ${{ inputs.config-file-glob }}) >> $GITHUB_OUTPUT
       shell: bash
