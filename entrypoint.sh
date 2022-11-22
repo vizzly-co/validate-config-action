@@ -3,7 +3,11 @@
 echo "Am i seen?"
 echo "Am i seen? 2"
 
+
+vizzly --help
+
 echo "Starting validating..."
+
 
 vizzly validate --config "$1" >> out
 
@@ -20,3 +24,4 @@ ls /
 sh -c "echo $*"
 
 node /writeSomething.js
+
