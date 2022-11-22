@@ -9,4 +9,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - '--config "${{ inputs.config-file-glob }}"'
+    - ${{ inputs.config-file-glob }}

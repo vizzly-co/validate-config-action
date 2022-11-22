@@ -4,4 +4,4 @@ COPY ./ .
 
 RUN npm i -g @vizzly/cli
 
-ENTRYPOINT [ "vizzly", "validate" ]
+ENTRYPOINT [ "/bin/sh", "run.sh" ]
