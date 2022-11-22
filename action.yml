@@ -6,10 +6,10 @@ inputs:
     required: true
     default: 'vizzly.config.json'
 runs:
-  using: "composite"
   steps:
-    - id: validate-configs
+    - id: install-vizzly-cli
+      run: npm i -g @vizzly/cli
       shell: bash
-      run: |
-        npm i -g @vizzly/cli
-        vizzly validate --config "${{ inputs.config-file-glob }}" >>$GITHUB_OUTPUT
+    - id: validate-configs
+      run: vizzly validate --config "${{ inputs.config-file-glob }}" >>$GITHUB_OUTPUT
+      shell: bash
