@@ -11,6 +11,10 @@ cat out
 
 vizzly validate --config "$1" && echo "Done."
 
+pwd
+ls ./
+ls /
+
 # `$*` expands the `args` supplied in an `array` individually
 # or splits `args` in a string separated by whitespace.
 sh -c "echo $*"
