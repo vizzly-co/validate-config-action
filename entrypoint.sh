@@ -1,5 +1,10 @@
 #!/bin/sh
 
+echo "Am i seen?"
+echo "Am i seen? 2" >>$GITHUB_OUTPUT
+
+npm i -g @vizzly/cli
+
 echo "Starting validating..." >> $GITHUB_OUTPUT
 
 vizzly validate --config "$1" >> $GITHUB_OUTPUT

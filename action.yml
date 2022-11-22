@@ -1,17 +1,15 @@
-name: 'Validate Vizzly config'
-description: 'Validate Vizzly configs as part of your CI/CD process for Vizzly dashboards.'
+name: 'Hello World'
+description: 'Greet someone and record the time'
 inputs:
-  config-file-glob:
-    description: 'Matcher to validate one or more Vizzly config files'
+  who-to-greet:  # id of input
+    description: 'Who to greet'
     required: true
-    default: 'vizzly.config.json'
+    default: 'World'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
-  using: docker
-  image: 'node:16-alpine'
-  steps:
-    - id: install-vizzly-cli
-      run: npm i -g @vizzly/cli
-      shell: bash
-    - id: validate-configs
-      run: vizzly validate --config "${{ inputs.config-file-glob }}" >>$GITHUB_OUTPUT
-      shell: bash
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
