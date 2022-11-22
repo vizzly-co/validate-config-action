@@ -9,7 +9,5 @@ runs:
   using: "composite"
   steps:
     - run: npm i -g @vizzly/cli
-      shell: shell
     - id: validate-configs
       run: vizzly validate --config ${{ inputs.config-file-glob }} >> $GITHUB_OUTPUT
-      shell: shell
